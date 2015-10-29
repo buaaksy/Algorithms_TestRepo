@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include <stdio.h>
-long int fact(long int n);
+long long int fact(long int n);
 int main()
 	{
 	int t = 0;
@@ -14,16 +14,17 @@ int main()
 		printf_s("%d £¡ = 1\r\n",t);
 	}
 	else {
-		long int d = fact(t);
+		long long int d = fact(t);
 		printf_s("%d£¡ = %d\r\n",t,d);
 	}
 	getchar();
 	getchar();
     return 0;
 }
-long int fact(long int n) {
+long long int fact(long int n) {
 	if (n <= 1)
 		return 1;
+
 	else
 		return n*fact(n - 1);
 }
